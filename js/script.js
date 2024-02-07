@@ -13,3 +13,43 @@
 
 // Consigli del giorno:  
 // Scriviamo prima cosa vogliamo fare passo passo in italiano, dividiamo il lavoro in micro problemi.
+
+
+
+
+const gridElement = document.querySelector('#grid');
+const playButton = document.querySelector('#play');
+
+
+
+
+
+playButton.addEventListener('click', function() {
+
+    console.log("play");
+
+// creazione griglia
+    for (let i = 0; i < 100; i++) {
+
+        //creo la box della griglia
+        const newBox = document.createElement('div');
+        newBox.classList.add('sqaure');
+
+
+        newBox.innerHTML = [i+1];
+    
+
+    newBox.addEventListener('click', function() {
+
+        console.log(this);
+
+        
+        newBox.classList.toggle('active');
+        
+    }
+    )
+
+    gridElement.append(newBox);
+}
+}
+)
