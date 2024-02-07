@@ -42,6 +42,7 @@ playButton.addEventListener('click', function() {
     // rimozione griglie (partite precedenti) con 'remove'
 
     gridElement.classList.remove('medium');
+
     gridElement.classList.remove('hard');
 
 
@@ -77,6 +78,15 @@ playButton.addEventListener('click', function() {
         //creo la box della griglia
         const newBox = document.createElement('div');
         newBox.classList.add('square');
+
+        //classi per i singoli box
+        if (changeLevel == "medium") {
+            newBox.classList.add('medium');
+        }
+
+        if (changeLevel == "hard") {
+            newBox.classList.add('hard');
+        }
 
 
         newBox.innerHTML = [i+1];
