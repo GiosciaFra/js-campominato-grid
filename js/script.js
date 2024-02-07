@@ -18,8 +18,23 @@
 
 
 const gridElement = document.querySelector('#grid');
-const playButton = document.querySelector('#play');
+const playButton = document.querySelector('#play'); 
+const levelElement = document.querySelector('#level');
 
+
+//  cambio livello
+
+let changeLevel = levelElement.value;
+
+console.log(changeLevel);
+
+levelElement.addEventListener('change',
+function() {
+
+    changeLevel = levelElement.value;
+    console.log('livello', changeLevel);
+}
+)
 
 playButton.addEventListener('click', function() {
 
