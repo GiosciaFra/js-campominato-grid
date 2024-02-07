@@ -13,6 +13,15 @@ body {
     width: 400px;
 }
 
+#grid.medium {
+    width: 360px;
+    height: 360px;
+}
+
+#grid.hard  {
+    width: 280px;
+    height: 280px;
+}
 
 .square {
     display: flex;

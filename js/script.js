@@ -38,10 +38,41 @@ function() {
 
 playButton.addEventListener('click', function() {
 
-    console.log("play");
+
+    // rimozione griglie (partite precedenti) con 'remove'
+
+    gridElement.classList.remove('medium');
+    gridElement.classList.remove('hard');
+
+
+    while (gridElement.firstChild) {
+        gridElement.removeChild(gridElement.firstChild);
+    }
+
+
+    // console.log("play");
+
+    let gridLevel;
+
+    if (changeLevel == "medium") {
+        gridLevel = 81;
+    } else if (changeLevel === "hard") {
+        gridLevel = 49;
+    } else  {
+    gridLevel = 100;
+    }
 
 // creazione griglia
-    for (let i = 0; i < 100; i++) {
+    for (let i = 0; i < gridLevel; i++) {
+
+        if (changeLevel == "medium") {
+            gridElement.classList.add("medium");
+        }
+
+        if (changeLevel == "hard") {
+            gridElement.classList.add("hard");
+        }
+
 
         //creo la box della griglia
         const newBox = document.createElement('div');
