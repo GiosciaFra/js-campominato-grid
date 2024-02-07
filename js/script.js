@@ -21,9 +21,6 @@ const gridElement = document.querySelector('#grid');
 const playButton = document.querySelector('#play');
 
 
-
-
-
 playButton.addEventListener('click', function() {
 
     console.log("play");
@@ -33,7 +30,7 @@ playButton.addEventListener('click', function() {
 
         //creo la box della griglia
         const newBox = document.createElement('div');
-        newBox.classList.add('sqaure');
+        newBox.classList.add('square');
 
 
         newBox.innerHTML = [i+1];
